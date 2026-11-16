@@ -4,7 +4,7 @@ package_name = 'unitree_bridge'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='1.0.0',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -17,13 +17,14 @@ setup(
     zip_safe=True,
     maintainer='jiewang',
     maintainer_email='wjjy1123@163.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='ROS 2 bridge for Unitree robot motion, wireless controller, and camera stream interfaces.',
+    license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'cmd_vel_bridge = unitree_bridge.cmd_vel_bridge:main',
             'wireless_controller = unitree_bridge.wireless_controller:main',
+            'image_bridge = unitree_bridge.image_bridge:main',
         ],
     },
 )
